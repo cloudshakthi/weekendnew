@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cloudshakthiweekendnew 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudshakthiweekendnew
+  template:
+    metadata:
+      labels:
+        app: cloudshakthiweekendnew 
+    spec:
+      containers:
+        - name: cloudshakthiweekendnew 
+          image: acr2106.azurecr.io/cloudshakthiweekendnew
+          ports:
+          - containerPort: 8080
